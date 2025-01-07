@@ -6,20 +6,20 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/scriptengine-tasks-ecearth-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/scriptengine-tasks-ecearth-{{ version }}.tar.gz
   sha256: d319b185b592297e7c14ef7a84072991ee51f03dd3742b96c9354d6f493fae11
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - scriptengine >=0.8.1
     - pyyaml >=5.1
     - matplotlib-base >=3.1
@@ -35,6 +35,7 @@ test:
     - se --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/uwefladrich/scriptengine-tasks-ecearth
