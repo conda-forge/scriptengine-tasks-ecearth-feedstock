@@ -1,5 +1,5 @@
 {% set name = "scriptengine-tasks-ecearth" %}
-{% set version = "0.7.0" %}
+{% set version = "0.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 29247d48a56438e2adda15befd72916c7de2ebae1a87eda230ea162113354173
+  sha256: 9564a389b1f57e4987faf8734e9aaab5bdd645bc28df496c58b08f254b4f4199
 
 build:
   noarch: python
