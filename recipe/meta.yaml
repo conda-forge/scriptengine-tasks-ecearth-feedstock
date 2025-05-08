@@ -29,6 +29,7 @@ requirements:
     - scitools-iris !=3.2.0,!=3.2.0.post0,>=3.1
     - cartopy >=0.20
     - python-redmine
+    - python-gitlab
 
 test:
   commands:
