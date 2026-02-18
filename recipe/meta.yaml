@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 7e3af5cbe2a10573e248b56a9fdb535d79e2c018e5ec05e22b85f258e0581460
+  sha256: 999fb2d059be20651a5123eeef411c6baed5d2b09419bbf84dffa833064cafc0
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
